@@ -2,17 +2,43 @@ function getComputerChoice() {
   return Math.floor(Math.random() * 3);
 }
 
-let playerSelection = "rock";
-let computerSelection = getComputerChoice();
+function playerPlay() {
+  return prompt(
+    "Choose your play between: rock, paper and scissors:"
+  ).toLowerCase();
+}
 
-function playRound() {
-  if (computerSelection === 0 && playerSelection === "rock") {
+let score = 0;
+let playerScore = 0;
+let computerScore = 0;
+
+function playRound(playerSelection, computerSelection) {
+  if (
+    (computerSelection === 0 && playerSelection === "rock") ||
+    (computerSelection === 1 && playerSelection === "paper") ||
+    (computerSelection === 2 && playerSelection === "scissors")
+  ) {
     return "Draw!";
-  } else if (computerSelection === 1 && playerSelection === "rock") {
-    return "CPU Wins!";
+  } else if (
+    (computerSelection === 0 && playerSelection === "scissors") ||
+    (computerSelection === 1 && playerSelection === "rock") ||
+    (computerSelection === 2 && playerSelection === "paper")
+  ) {
+    return "CPU Wins!" + ++computerScore + ++score;
   } else {
-    return "Player Wins!";
+    return "Player Wins!" + ++playerScore + ++score;
   }
 }
 
-console.log(playRound());
+function game() {
+  while (score < 5) {
+    console.log(playRound(playerPlay(), getComputerChoice()));
+  }
+  if (playerScore > computerScore) {
+    alert("Player is the WINNER!");
+  } else {
+    alert("CPU is the WINNER!");
+  }
+}
+
+game();
