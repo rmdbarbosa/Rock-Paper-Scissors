@@ -12,7 +12,7 @@ let score = 0;
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
   if (
     (computerSelection === 0 && playerSelection === "rock") ||
     (computerSelection === 1 && playerSelection === "paper") ||
@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
+/* function game() {
   while (score < 5) {
     console.log(playRound(playerPlay(), getComputerChoice()));
   }
@@ -39,6 +39,34 @@ function game() {
   } else {
     alert("CPU is the WINNER!");
   }
-}
+} */
 
-game();
+const btnRock = document.querySelector("#btnRock");
+btnRock.addEventListener("click", () => {
+  return (
+    (playerSelection = "rock"),
+    (computerSelection = getComputerChoice()),
+    playRound(playerSelection, getComputerChoice()),
+    console.log(playRound())
+  );
+});
+
+const btnPaper = document.querySelector("#btnPaper");
+btnPaper.addEventListener("click", () => {
+  return (
+    (playerSelection = "paper"),
+    (computerSelection = getComputerChoice()),
+    playRound(playerSelection, getComputerChoice()),
+    console.log(playRound())
+  );
+});
+
+const btnScissors = document.querySelector("#btnScissors");
+btnScissors.addEventListener("click", () => {
+  return (
+    (playerSelection = "scissors"),
+    (computerSelection = getComputerChoice()),
+    playRound(playerSelection, getComputerChoice()),
+    console.log(playRound())
+  );
+});
