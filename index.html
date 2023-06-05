@@ -5,17 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src=".//script.js" defer></script>
+    <link rel="stylesheet" href=".//styles.css" />
     <title>rps-ui</title>
   </head>
   <body>
     <div id="container">
-      <button id="btnRock">Rock</button>
-      <button id="btnPaper">Paper</button>
-      <button id="btnScissors">Scissors</button>
-
+      <div id="title"><h1>ROCK-PAPER-SCISSORS</h1></div>
+      <div id="btns">
+        <img id="btnRock" src=".//rock.png" alt="" />
+        <img id="btnPaper" src=".//paper.png" alt="" />
+        <img id="btnScissors" src=".//scissors.png" alt="" />
+      </div>
       <div id="score">
-        <h3 id="playerScore">Player Score:</h3>
-        <h3 id="computerScore">Computer Score:</h3>
+        <h3 id="playerScore">
+          Player Score:
+          <p id="playerScoreP"></p>
+        </h3>
+        <h3 id="computerScore">
+          Computer Score:
+          <p id="computerScoreP"></p>
+        </h3>
       </div>
     </div>
   </body>

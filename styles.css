@@ -1,0 +1,122 @@
+#container {
+  /* border: 10px solid gray; */
+  height: 90vh;
+  position: relative;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btns {
+  /* border: 10px solid gray; */
+  max-width: 900px;
+  width: 100%;
+
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#btnRock:hover::before {
+  /* border: 10px solid gray; */
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffee10;
+}
+
+#btnRock:hover {
+  color: #ffee10;
+  box-shadow: 0 0 100px #ffee10;
+  text-shadow: 0 0 100px #ffee10;
+}
+
+#btnRock:active {
+  box-shadow: inset 1px 1px 1px var(--color-bg),
+    0 0 0 4px var(--color-overlay-dark),
+    inset -1px -1px 1px var(--color-bg-light),
+    inset 0.5rem 0.5rem 0.75rem var(--color-bg-dark),
+    inset 0.5rem 0.5rem 0.5rem var(--color-bg-light);
+}
+#btnScissors:hover::before {
+  /* border: 10px solid gray; */
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffee10;
+}
+
+#btnScissors:hover {
+  color: #ffee10;
+  box-shadow: 0 0 100px #ffee10;
+  text-shadow: 0 0 100px #ffee10;
+}
+
+#btnScissors:active {
+  box-shadow: inset 1px 1px 1px var(--color-bg),
+    0 0 0 4px var(--color-overlay-dark),
+    inset -1px -1px 1px var(--color-bg-light),
+    inset 0.5rem 0.5rem 0.75rem var(--color-bg-dark),
+    inset 0.5rem 0.5rem 0.5rem var(--color-bg-light);
+}
+#btnPaper:hover::before {
+  /* border: 10px solid gray; */
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffee10;
+}
+
+#btnPaper:hover {
+  color: #ffee10;
+  box-shadow: 0 0 100px #ffee10;
+  text-shadow: 0 0 100px #ffee10;
+}
+
+#btnPaper:active {
+  box-shadow: inset 1px 1px 1px var(--color-bg),
+    0 0 0 4px var(--color-overlay-dark),
+    inset -1px -1px 1px var(--color-bg-light),
+    inset 0.5rem 0.5rem 0.75rem var(--color-bg-dark),
+    inset 0.5rem 0.5rem 0.5rem var(--color-bg-light);
+}
+
+#playerScore {
+  border: 10px solid gray;
+  max-width: 700px;
+  width: 100%;
+
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  right: 1;
+  left: 0;
+  top: 1;
+  bottom: 0;
+  margin: auto;
+}
+#computerScore {
+  border: 10px solid gray;
+  max-width: 700px;
+  width: 100%;
+
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  right: 0;
+  left: 1;
+  top: 1;
+  bottom: 0;
+  margin: auto;
+}
